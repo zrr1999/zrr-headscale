@@ -1,0 +1,12 @@
+version: '3.5'
+services:
+  headscale:
+    image: headscale/headscale:latest-alpine
+    container_name: headscale
+    volumes:
+      - ~/.config/haedscale:/etc/headscale
+      - ~/.config/haedscale/data:/var/lib/headscale
+    ports:
+      - 8080:8080
+    command: headscale serve
+    restart: unless-stopped
