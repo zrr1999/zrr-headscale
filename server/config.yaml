@@ -14,12 +14,12 @@ server_url: https://headscale.bone6.top:443
 
 # Address to listen to / bind to on the server
 #
-listen_addr: 127.0.0.1:8080
+listen_addr: 0.0.0.0:8080
 
 # Address to listen to /metrics, you may want
 # to keep this endpoint private to your internal
 # network
-metrics_listen_addr: 127.0.0.1:9090
+metrics_listen_addr: 0.0.0.0:9090
 
 # Address to listen for gRPC.
 # gRPC is used for controlling a headscale server
@@ -27,7 +27,7 @@ metrics_listen_addr: 127.0.0.1:9090
 # Note: Remote access _only_ works if you have
 # valid certificates.
 #
-grpc_listen_addr: 127.0.0.1:50443
+grpc_listen_addr: 0.0.0.0:50443
 
 # Allow the gRPC admin interface to run in INSECURE
 # mode. This is not recommended as the traffic will
@@ -254,8 +254,8 @@ dns_config:
 
 # Unix socket used for the CLI to connect without authentication
 # Note: for production you will want to set this to something like:
-unix_socket: /var/run/headscale/headscale.sock
-unix_socket_permission: "0770"
+# unix_socket: /var/run/headscale/headscale.sock
+# unix_socket_permission: "0770"
 #
 # headscale supports experimental OpenID connect support,
 # it is still being tested and might have some bugs, please
