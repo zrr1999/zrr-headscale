@@ -234,10 +234,10 @@ dns_config:
   # Extra DNS records
   # so far only A-records are supported (on the tailscale side)
   # See https://github.com/juanfont/headscale/blob/main/docs/dns-records.md#Limitations
-  # extra_records:
-  #   - name: "grafana.myvpn.example.com"
-  #     type: "A"
-  #     value: "100.64.0.3"
+  extra_records:
+    - name: "3090.bone6.top"
+      type: "A"
+      value: "100.64.0.1"
   #
   #   # you can also put it in one line
   #   - { name: "prometheus.myvpn.example.com", type: "A", value: "100.64.0.3" }
